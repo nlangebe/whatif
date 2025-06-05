@@ -4,6 +4,4 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: voila whatif.ipynb --port=$PORT --no-browser --Voila.server.allow_origin="*" --Voila.server.enable_nbextensions=True
-    envVars:
-      - key: PORT
-        value: 10000
+
