@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: whatif
+    name: voila-app
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: voila whatif.ipynb --port=$PORT --no-browser --Voila.ip=0.0.0.0 --Voila.tornado_settings='{"headers": {"Access-Control-Allow-Origin": "*"}}'
+    startCommand: voila whatif.ipynb --port=$PORT --no-browser --ip=0.0.0.0
