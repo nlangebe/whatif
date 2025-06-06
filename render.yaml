@@ -3,9 +3,7 @@ services:
     name: whatif-voila
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: voila whatif.ipynb --port=$PORT --no-browser --ip=0.0.0.0
+    startCommand: voila whatif.ipynb --port=$PORT --no-browser
     envVars:
       - key: PYTHONUNBUFFERED
         value: "1"
-      - key: VOILA_APP
-        value: whatif.ipynb
